@@ -1,0 +1,51 @@
+﻿@model IEnumerable<gm554016.Models.Owner>
+
+@{
+    ViewBag.Title = "Game Library Owners";
+}
+
+<h2>Game Library Owners</h2>
+
+<p>
+    @Html.ActionLink("Create New Owner", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            First Name
+        </th>
+        <th>
+            Last Name
+        </th>
+        <th>
+            Email
+        </th>
+        <th>
+            Phone
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.firstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.phone)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ownerID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ownerID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ownerID })
+        </td>
+    </tr>
+}
+
+</table>

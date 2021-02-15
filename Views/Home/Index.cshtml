@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "Gabriel Morrison's Home Page";
+}
+
+<div class="jumbotron">
+    <h2><strong>What's New as of Feb. 14, 2021:</strong></h2>
+    <p class="lead">
+        <strong>-Game Library Functionality added</strong><br />
+        -Games Index and CRUD<br />
+        -Game Owners Index and CRUD<br />
+        -Game Publishers Index and CRUD<br />
+        -Game Consoles Index and CRUD<br />
+        -Console Developers Index and CRUD<br />
+        -Secondary Genre Field added to Game Model<br />
+        -Data Migration set up<br />
+        <strong>-Album of the Week updated</strong><br />
+    </p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Album of the Week</h2>
+        <p>
+            The best part about the pandemic has been getting to create our very own apocalypse radio!
+            Whilst working and schooling from home, I've gotten the chance to broaden some of my musical horizons and listen to some new music.
+            So what's been on this week?
+        </p>
+        <h2>Closer</h2>
+        <h3>Joy Division</h3>
+        <img src="~/Content/Images/closer.jpg" alt="Closer - Joy Division" width="300" />
+        <br />
+        <br />
+        <p><a class="btn btn-default" href="https://open.spotify.com/album/0KBdfMTMxi0oD1oVqApTjr">Listen Here (using Spotify) &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Chess.com</h2>
+        <p>
+            Bored between classes? My roommates and I started playing chess in our apartment last semester and it's become a welcome distraction from work and classes.
+            Linked below is Chess.com, you can either make an account or play as a guest. This is a great way to play some chess for free! They even have resources to help you learn if you're new.
+            <br />
+            <br />
+            Wanna play chess sometime? Add me as a friend if you ever make an account: <strong>00GMo</strong>
+        </p>
+        <p><a class="btn btn-default" href="https://www.chess.com/play">Play Chess Online &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Game Library Links</h2>
+        <ul>
+            <li>@Html.ActionLink("Games", "Index", "Games")</li>
+            <li>@Html.ActionLink("Game Owners", "Index", "Owners")</li>
+            <li>@Html.ActionLink("Game Publishers", "Index", "Publishers")</li>
+            <li>@Html.ActionLink("Game Consoles", "Index", "Consoles")</li>
+            <li>@Html.ActionLink("Console Developers", "Index", "Developers")</li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<gm554016.Models.Consoles>
+
+@{
+    ViewBag.Title = "Game Consoles";
+}
+
+<h2>Game Consoles</h2>
+
+<p>
+    @Html.ActionLink("Create New Game Console", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Developer Name
+        </th>
+        <th>
+            Console Name
+        </th>
+        <th>
+            Release Date
+        </th>
+        <th>
+            Description
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.developer.developerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.consoleName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.releaseDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.description)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.consolesID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.consolesID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.consolesID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,48 @@
+﻿@model gm554016.Models.Owner
+
+@{
+    ViewBag.Title = "Game Library Owner Details";
+}
+
+<h2>Game Library Owner Details</h2>
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            First Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.firstName)
+        </dd>
+
+        <dt>
+            Last Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lastName)
+        </dd>
+
+        <dt>
+            Email
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+        <dt>
+            Phone
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.phone)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ownerID }) |
+    @Html.ActionLink("Back to Game Library Owner List", "Index")
+</p>

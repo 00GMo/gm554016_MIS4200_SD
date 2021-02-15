@@ -1,0 +1,95 @@
+﻿@model gm554016.Models.Game
+
+@{
+    ViewBag.Title = "Delete Game Entry";
+}
+
+<h2>Delete Game Entry</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    
+    <dl class="dl-horizontal">
+        <dt>
+            Console Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.consoles.consoleName)
+        </dd>
+
+        <dt>
+            Owner Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.owner.fullName)
+        </dd>
+
+        <dt>
+            Publisher Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.publisher.publisherName)
+        </dd>
+
+        <dt>
+            Game Title
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gameTitle)
+        </dd>
+
+        <dt>
+            Game Series
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gameSeries)
+        </dd>
+
+        <dt>
+            Primary Genre
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.genreOne)
+        </dd>
+
+        <dt>
+            Secondary Genre
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.genreTwo)
+        </dd>
+
+        <dt>
+            Release Date
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.releaseDate)
+        </dd>
+
+        <dt>
+            Description
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.description)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            @Html.ActionLink("Back to Game List", "Index")
+        </div>
+    }
+</div>

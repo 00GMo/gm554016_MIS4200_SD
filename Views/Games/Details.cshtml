@@ -1,0 +1,89 @@
+﻿@model gm554016.Models.Game
+
+@{
+    ViewBag.Title = "Game Entry Details";
+}
+
+<h2>Game Entry Details</h2>
+
+<div>
+    
+    <dl class="dl-horizontal">
+        <dt>
+            Console Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.consoles.consoleName)
+        </dd>
+
+        <dt>
+            Owner Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.owner.fullName)
+        </dd>
+
+        <dt>
+            Publisher Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.publisher.publisherName)
+        </dd>
+
+        <dt>
+            Game Title
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gameTitle)
+        </dd>
+
+        <dt>
+            Game Series
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gameSeries)
+        </dd>
+
+        <dt>
+            Primary Genre
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.genreOne)
+        </dd>
+
+        <dt>
+            Secondary Genre
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.genreTwo)
+        </dd>
+
+        <dt>
+            Release Date
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.releaseDate)
+        </dd>
+
+        <dt>
+            Description
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.description)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.gameID }) |
+    @Html.ActionLink("Back to Game List", "Index")
+</p>

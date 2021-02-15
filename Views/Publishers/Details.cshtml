@@ -1,0 +1,41 @@
+﻿@model gm554016.Models.Publisher
+
+@{
+    ViewBag.Title = "Game Publisher Details";
+}
+
+<h2>Game Publisher Details</h2>
+
+<div>
+    
+    <dl class="dl-horizontal">
+        <dt>
+            Publisher Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.publisherName)
+        </dd>
+
+        <dt>
+            HQ Location
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hqLocation)
+        </dd>
+
+        <dt>
+            Description
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.description)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.publisherID }) |
+    @Html.ActionLink("Back to Game Publisher List", "Index")
+</p>

@@ -1,0 +1,41 @@
+﻿@model gm554016.Models.Developer
+
+@{
+    ViewBag.Title = "Console Developer Details";
+}
+
+<h2>Console Developer Details</h2>
+
+<div>
+    
+    <dl class="dl-horizontal">
+        <dt>
+            Developer Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.developerName)
+        </dd>
+
+        <dt>
+            HQ Location
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hqLocation)
+        </dd>
+
+        <dt>
+            Description
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.description)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.developerID }) |
+    @Html.ActionLink("Back to Console Developer List", "Index")
+</p>

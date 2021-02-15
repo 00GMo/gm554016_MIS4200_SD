@@ -1,0 +1,45 @@
+﻿@model IEnumerable<gm554016.Models.Publisher>
+
+@{
+    ViewBag.Title = "Game Publishers";
+}
+
+<h2>Game Publishers</h2>
+
+<p>
+    @Html.ActionLink("Create New Game Publishers", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Publisher Name
+        </th>
+        <th>
+            HQ Location
+        </th>
+        <th>
+            Description
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.publisherName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hqLocation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.description)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.publisherID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.publisherID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.publisherID })
+        </td>
+    </tr>
+}
+
+</table>

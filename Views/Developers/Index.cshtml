@@ -1,0 +1,45 @@
+﻿@model IEnumerable<gm554016.Models.Developer>
+
+@{
+    ViewBag.Title = "Console Developers";
+}
+
+<h2>Console Developers</h2>
+
+<p>
+    @Html.ActionLink("Create New Console Developer", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Developer Name
+        </th>
+        <th>
+            HQ Location
+        </th>
+        <th>
+            Description
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.developerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hqLocation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.description)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.developerID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.developerID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.developerID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,81 @@
+﻿@model IEnumerable<gm554016.Models.Game>
+
+@{
+    ViewBag.Title = "Game Library";
+}
+
+<h2>Game Library</h2>
+
+<p>
+    @Html.ActionLink("Create New Game Entry", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Console Name
+        </th>
+        <th>
+            Owner Name
+        </th>
+        <th>
+            Publisher Name
+        </th>
+        <th>
+            Game Title
+        </th>
+        <th>
+            Game Series
+        </th>
+        <th>
+            Primary Genre
+        </th>
+        <th>
+            Secondary Genre
+        </th>
+        <th>
+            Release Date
+        </th>
+        <th>
+            Description
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.consoles.consoleName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.owner.fullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.publisher.publisherName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gameTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gameSeries)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.genreOne)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.genreTwo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.releaseDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.description)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.gameID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.gameID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.gameID })
+        </td>
+    </tr>
+}
+
+</table>
